@@ -1,0 +1,12 @@
+docker compose up --build -d ####### to build the containers -d to detach
+docker ps                    ####### To check running containers
+docker exec -it nginx bash   ####### to get a bash shell on the container named nginx
+
+
+
+docker system prune -a ############## IT DELETES
+*)all stopped containers
+*)all unused networks
+*)all dangling images (old layers that have no name bcs you rebuilt them)
+*)build cache
+*) -a deletes also the unused images
