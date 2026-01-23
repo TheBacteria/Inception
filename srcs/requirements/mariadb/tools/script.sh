@@ -29,4 +29,4 @@ echo "Stopping MariaDB..."
 service mariadb stop
 
 echo "Starting MariaDB with Monitoring..."
-mysqld_safe --port=3306 --bind-address=0.0.0.0 --datadir='/var/lib/mysql'
+exec mysqld_safe --port=3306 --bind-address=0.0.0.0 --datadir='/var/lib/mysql'
