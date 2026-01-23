@@ -6,14 +6,20 @@ services:
 #      - "443:443"  # NOT SURE OF THIS! CHECK IT LATER ON !
 #    depends_on:
 #      - wordpress
+#     restart: always
 
-#  wordpress:
-#    build: requirements/wordpress/
-#    depends_on:
-#      - mariadb
+
+  wordpress:
+    build: requirements/wordpress/
+    env_file:
+      - ./.env
+    depends_on:
+      - mariadb
+    restart: always
 
   mariadb:
     build: requirements/mariadb/
     container_name: mariadb
     env_file:
       - ./.env
+    restart: always

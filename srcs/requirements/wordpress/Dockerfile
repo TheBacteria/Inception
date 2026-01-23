@@ -15,4 +15,6 @@ COPY ./tools/script.sh /wordpress.sh
 
 RUN chmod +x wordpress.sh
 
+EXPOSE 9000
+
 ENTRYPOINT ["/wordpress.sh"]
