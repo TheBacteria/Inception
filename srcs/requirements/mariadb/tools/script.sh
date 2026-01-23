@@ -20,8 +20,13 @@ mariadb -e "GRANT ALL PRIVILEGES ON ${DB_NAME}.* TO '${DB_USER}'@'%' WITH GRANT 
 echo "Flushing Privileges..."
 mariadb -e "FLUSH PRIVILEGES;"
 
+echo "Waiting for Debian maintenance scripts to finish..."
+while pgrep -f "debian-start" > /dev/null; do
+    sleep 1
+done
+
 echo "Stopping MariaDB..."
-mysqladmin shutdown
+service mariadb stop
 
 echo "Starting MariaDB with Monitoring..."
 mysqld_safe --port=3306 --bind-address=0.0.0.0 --datadir='/var/lib/mysql'
