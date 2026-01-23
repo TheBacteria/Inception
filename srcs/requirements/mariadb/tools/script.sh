@@ -21,7 +21,7 @@ echo "Flushing Privileges..."
 mariadb -e "FLUSH PRIVILEGES;"
 
 echo "Stopping MariaDB..."
-mysqladmin -u root shutdown
+mysqladmin shutdown
 
 echo "Starting MariaDB with Monitoring..."
 mysqld_safe --port=3306 --bind-address=0.0.0.0 --datadir='/var/lib/mysql'
