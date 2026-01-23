@@ -29,7 +29,7 @@ if [ ! -f "$WP_PATH/wp-config.php" ]; then
     wordpress config create \
 		--dbname="$DB_NAME" \
 		--dbuser="$DB_USER" \
-    	--dbpass="$DB_USER" \
+    	--dbpass="$DB_PASSWORD" \
 		--dbhost="$DB_HOST:$DB_PORT" \
 		--path="$WP_PATH" \
 		--allow-root
