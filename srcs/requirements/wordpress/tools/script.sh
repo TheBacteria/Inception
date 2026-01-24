@@ -56,8 +56,8 @@ fi
 
 #Adding normal a user...
 echo "Creating normal WordPress user..."
-if ! wp user get "$WP_USER" --field=ID --path="$WP_PATH" --allow-root &> /dev/null; then
-    wp user create "$WP_USER" "$WP_USER_EMAIL" --role="$ROLE" --user_pass="$WP_PASS" --path="$WP_PATH" --allow-root
+if ! wordpress user get "$WP_USER" --field=ID --path="$WP_PATH" --allow-root &> /dev/null; then
+    wordpress user create "$WP_USER" "$WP_USER_EMAIL" --role="$ROLE" --user_pass="$WP_PASS" --path="$WP_PATH" --allow-root
     echo "WordPress user $WP_USER created."
 else
     echo "user already created....."
