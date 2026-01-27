@@ -41,16 +41,16 @@ services:
 
 volumes:
   wordpress_volume:
-    driver: local
+    driver: local #tells Docker to use the standard storage driver built into Linux
     driver_opts:
-      type: 'none'
-      o: 'bind'
+      type: 'none' #don't try to format or manage the filesystem
+      o: 'bind' #creates a direct portal from inside the container to a specific folder on your host machine
       device: '/home/mzouine/data/wordpress'
   mariadb_volume:
     driver: local
     driver_opts:
       type: 'none'
-      o: 'bind'
+      o: 'bind' 
       device: '/home/mzouine/data/mariadb'
 networks:
   inception:
