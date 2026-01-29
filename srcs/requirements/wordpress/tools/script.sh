@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #Creating the directory...
-WP_PATH='/var/www/wordpress'
 echo "Creating directory : $WP_PATH ..."
 mkdir -p "$WP_PATH"
 echo "Directory $WP_PATH Created !"

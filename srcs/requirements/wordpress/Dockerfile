@@ -3,8 +3,8 @@ FROM debian:12
 RUN apt update && apt install -y \
     curl \
     php8.2 \
-    php-fpm \
-    php-mysql \
+    php8.2-fpm \
+    php8.2-mysql \
     mariadb-client
 
 RUN curl -o wp-cli.phar -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
