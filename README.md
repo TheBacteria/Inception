@@ -59,3 +59,5 @@ Create the Mariadb directory in your host machine:
 * Docker compose: https://youtu.be/DM65_JyGxCo?si=pshp9fBKgO-CkbCG
 * Docker networking: https://youtu.be/bKFMS5C4CG0?si=JKUpZnhkxjDN4ipL
 * Containers: cgroups, Linux kernel namespaces...: https://youtu.be/el7768BNUPw?si=rVsvcpcYG4zcCUMQ
+
+#### AI was used to generate the initial structure of the project and provided guidance throughout its development.
