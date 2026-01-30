@@ -11,7 +11,7 @@ RUN openssl req -x509 -newkey rsa:4096 -nodes -days 365 \
     -keyout /etc/nginx/ssl/nginx.key \
     -out /etc/nginx/ssl/nginx.crt
 
-COPY ./conf/nginx.conf /etc/nginx/sites-available/default
+COPY ./conf/nginx.conf /etc/nginx/sites-enabled/default
 
 EXPOSE 443
 
