@@ -15,4 +15,4 @@ COPY ./conf/nginx.conf /etc/nginx/sites-enabled/default
 
 EXPOSE 443
 
-CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["nginx", "-g", "daemon off;"]
