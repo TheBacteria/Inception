@@ -4,7 +4,7 @@ services:
     image: nginx
     container_name: nginx
     ports:
-      - "1500:443"
+      - "443:443"
     depends_on:
       - wordpress
     volumes:

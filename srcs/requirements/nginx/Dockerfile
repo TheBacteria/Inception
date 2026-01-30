@@ -1,7 +1,8 @@
 FROM debian:12
 
 RUN apt update && apt install -y nginx openssl
-#all in 1 line so that it doesn't use and old cached layer of "apt update" when you add something new
+
+RUN rm -f /etc/nginx/sites-enabled/default
 
 RUN mkdir -p /etc/nginx/ssl
 
